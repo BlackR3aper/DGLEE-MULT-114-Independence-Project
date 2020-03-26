@@ -8,7 +8,7 @@ public class FPScontroller : MonoBehaviour
 
     public float speed = 12f;
     public float gravity = -9.81f;
-    public float jumpHeight = 0f;
+    public float jumpHeight = 1f;
 
     public Transform groundCheck;
     public float groundDistance = 0.4f;
@@ -40,7 +40,7 @@ public class FPScontroller : MonoBehaviour
         //codes for player to jump
         if (Input.GetButtonDown("Jump") && isGrounded)
         {
-            velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
+            velocity.y = Mathf.Sqrt(jumpHeight * -1f * gravity);
         }
 
         velocity.y += gravity * Time.deltaTime;
